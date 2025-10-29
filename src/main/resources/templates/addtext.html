@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html manifest="">
+
+<head th:insert="~{head}">
+</head>
+
+<body class="skin-black layout-top-nav sidebar-collapse" style="height: auto; min-height: 100%;">
+
+	<div class="wrapper" style="height: auto; min-height: 100%;">
+
+		<header class="main-header" th:insert="~{navbar}"></header>
+		<aside class="main-sidebar" th:insert="~{sidebar}"></aside>
+
+		<div class="content-wrapper"
+			style="position: relative; min-height: 600px;">
+
+			<section class="content-header">
+				<h1>
+					Adicionar Texto | <small>Adiciona texto ao modelo</small>
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+				</ol>
+			</section>
+
+			<section class="content container-fluid">
+				<div class="row">
+
+					<section class="col-lg-8">
+						<div class="box ">
+							<div class="box-header ui-sortable-handle">
+								<i class="fa fa-user"></i>
+								<h3 class="box-title">Texto a ser adicionado</h3>
+								<div class="pull-right box-tools">&nbsp;</div>
+							</div>							
+							<div class="box-body">
+								<form>
+									<div class="form-group">
+					                  <textarea id="textToAdd" class="form-control" rows="10" placeholder="Digite ..."></textarea>
+					                </div>									
+								</form>
+							</div>
+							<div class="box-footer clearfix">
+								<button type="button" id="addTextBtn" class="pull-right btn btn-default"> Adicionar </button>
+							</div>
+						</div>
+					</section>
+
+					<section class="col-lg-4">
+
+						<div class="box box-primary direct-chat direct-chat-primary">
+						            <div class="box-header with-border">
+						              <h3 class="box-title">Testar Modelo</h3>
+						            </div>
+						            <div class="box-body">
+						              <div id="msgContainer" class="direct-chat-messages">
+						              </div>
+								  </div>
+						            <div class="box-footer">
+						                <div class="input-group">
+						                  <input type="text" id="msgText" name="message" placeholder="Enviar Mensagem ..." class="form-control">
+						                      <span class="input-group-btn">
+						                        <button id="askBtn" class="btn btn-primary btn-flat">Enviar</button>
+						                      </span>
+						                </div>
+						            </div>
+						          </div>						
+					</section>
+				</div>
+			</section>
+		</div>
+
+		<aside class="control-sidebar control-sidebar-light"
+			th:insert="~{controlsidebar}"></aside>
+		<div class="control-sidebar-bg"></div>
+
+
+		<!-- Main Footer -->
+
+		<footer class="main-footer"
+			style="height: 44px; padding: 0px 10px 0px 10px; background-color: #222d32;">
+
+			<table id="tableFooter" style="width: 100%; cursor: pointer">
+				<tr>
+					<td>by Carlos Magno Abreu</td>
+
+					<td style="width: 40px">Foo</td>
+					<td style="width: 70px"></td>
+					<td style="width: 70px"></td>
+				</tr>
+				<tr>
+					<td>magno.mabreu@gmail.com</td>
+					<td style="width: 40px">Bar</td>
+					<td style="width: 70px"></td>
+					<td style="width: 70px"></td>
+				</tr>
+			</table>
+		</footer>
+
+
+	</div>
+
+	<!-- jQuery 3 -->
+	<script src="/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap 3.3.7 -->
+	<script	src="/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- AdminLTE App -->
+	<script src="/adminlte/dist/js/adminlte.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		
+	<script src="/common/websocket/sockjs.min.js"></script>
+	<script src="/common/websocket/stomp.min.js"></script>
+	<script src="/common/script.js"></script>
+	
+</body>
+
+</html>
+
